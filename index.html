@@ -4,268 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anchoring Effect Report</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            overflow: hidden;
-        }
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-        .header p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            padding: 30px;
-            background: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .stat-box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .stat-box .label {
-            font-size: 12px;
-            color: #666;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .stat-box .value {
-            font-size: 24px;
-            font-weight: bold;
-            color: #667eea;
-        }
-        .table-section {
-            padding: 40px;
-        }
-        .table-section h2 {
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-        th {
-            background: #667eea;
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 13px;
-            text-transform: uppercase;
-        }
-        td {
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
-            font-size: 14px;
-        }
-        tr:hover {
-            background: #f8f9fa;
-            cursor: pointer;
-        }
-        .rank {
-            font-weight: bold;
-            color: #667eea;
-            font-size: 16px;
-        }
-        .correlation {
-            font-weight: bold;
-            color: #e74c3c;
-        }
-        .significance {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        .highly-sig {
-            background: #e74c3c;
-            color: white;
-        }
-        .sig {
-            background: #f39c12;
-            color: white;
-        }
-        .findings {
-            padding: 40px;
-            border-top: 1px solid #e0e0e0;
-        }
-        .findings h2 {
-            font-size: 22px;
-            margin-bottom: 25px;
-            color: #333;
-        }
-        .finding-card {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .finding-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }
-        .finding-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        .finding-meta {
-            font-size: 12px;
-            color: #999;
-            margin-bottom: 15px;
-        }
-        .finding-content {
-            display: none;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-        }
-        .finding-content.active {
-            display: block;
-        }
-        .graph-container {
-            margin: 30px 0;
-            text-align: center;
-        }
-        .graph-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        .data-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .data-box {
-            background: white;
-            padding: 15px;
-            border-radius: 6px;
-            text-align: center;
-            border: 1px solid #e0e0e0;
-        }
-        .data-label {
-            font-size: 11px;
-            color: #666;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .data-value {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-        .data-sd {
-            font-size: 11px;
-            color: #999;
-            margin-top: 5px;
-        }
-        .explanation-box {
-            background: #f0f4ff;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-            line-height: 1.6;
-            font-size: 14px;
-            color: #555;
-        }
-        .observations-box {
-            background: #fff3cd;
-            border-left: 4px solid #f39c12;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-            line-height: 1.6;
-            font-size: 14px;
-            color: #333;
-        }
-        .observations-box strong {
-            color: #f39c12;
-        }
-        .insight-box {
-            background: white;
-            border-left: 4px solid #667eea;
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 4px;
-            font-size: 13px;
-            color: #555;
-        }
-        .conclusion {
-            background: #f0f4ff;
-            padding: 30px;
-            border-top: 1px solid #e0e0e0;
-            margin-top: 20px;
-        }
-        .conclusion h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-        .conclusion p {
-            color: #555;
-            line-height: 1.6;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-        .toggle-arrow {
-            display: inline-block;
-            float: right;
-            transition: transform 0.3s ease;
-        }
-        .toggle-arrow.active {
-            transform: rotate(180deg);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Anchoring Effect Correlation Analysis</h1>
             <p>Comprehensive statistical analysis of cognitive bias patterns across five distinct domains</p>
+        </div>
+
+        <!-- JSON Controls -->
+        <div class="json-controls">
+            <button class="btn btn-primary" onclick="viewJSON()">
+                📊 View User Data
+            </button>
+            <button class="btn btn-secondary" onclick="downloadJSON()">
+                ⬇️ Download JSON
+            </button>
         </div>
 
         <div class="stats-grid">
@@ -285,54 +40,56 @@
 
         <div class="table-section">
             <h2>Summary Table (Ranked by Effect Strength)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Task</th>
-                        <th>Correlation (r)</th>
-                        <th>P-value</th>
-                        <th>Significance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr onclick="toggleFinding(0)">
-                        <td class="rank">1</td>
-                        <td>Wheel of Fortune</td>
-                        <td class="correlation">0.6400</td>
-                        <td>0.0000</td>
-                        <td><span class="significance highly-sig">Highly Significant</span></td>
-                    </tr>
-                    <tr onclick="toggleFinding(1)">
-                        <td class="rank">2</td>
-                        <td>Watch Guess</td>
-                        <td class="correlation">0.5870</td>
-                        <td>0.0002</td>
-                        <td><span class="significance highly-sig">Highly Significant</span></td>
-                    </tr>
-                    <tr onclick="toggleFinding(2)">
-                        <td class="rank">3</td>
-                        <td>Monument L (Low Familiarity)</td>
-                        <td class="correlation">0.3867</td>
-                        <td>0.0217</td>
-                        <td><span class="significance sig">Significant</span></td>
-                    </tr>
-                    <tr onclick="toggleFinding(3)">
-                        <td class="rank">4</td>
-                        <td>Monument H (High Familiarity)</td>
-                        <td class="correlation">0.3791</td>
-                        <td>0.0247</td>
-                        <td><span class="significance sig">Significant</span></td>
-                    </tr>
-                    <tr onclick="toggleFinding(4)">
-                        <td class="rank">5</td>
-                        <td>Person Age</td>
-                        <td class="correlation">0.3737</td>
-                        <td>0.0270</td>
-                        <td><span class="significance sig">Significant</span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Task</th>
+                            <th>Correlation (r)</th>
+                            <th>P-value</th>
+                            <th>Significance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="toggleFinding(0)">
+                            <td class="rank">1</td>
+                            <td>Wheel of Fortune</td>
+                            <td class="correlation">0.6400</td>
+                            <td>0.0000</td>
+                            <td><span class="significance highly-sig">Highly Significant</span></td>
+                        </tr>
+                        <tr onclick="toggleFinding(1)">
+                            <td class="rank">2</td>
+                            <td>Watch Guess</td>
+                            <td class="correlation">0.5870</td>
+                            <td>0.0002</td>
+                            <td><span class="significance highly-sig">Highly Significant</span></td>
+                        </tr>
+                        <tr onclick="toggleFinding(2)">
+                            <td class="rank">3</td>
+                            <td>Monument L (Low Familiarity)</td>
+                            <td class="correlation">0.3867</td>
+                            <td>0.0217</td>
+                            <td><span class="significance sig">Significant</span></td>
+                        </tr>
+                        <tr onclick="toggleFinding(3)">
+                            <td class="rank">4</td>
+                            <td>Monument H (High Familiarity)</td>
+                            <td class="correlation">0.3791</td>
+                            <td>0.0247</td>
+                            <td><span class="significance sig">Significant</span></td>
+                        </tr>
+                        <tr onclick="toggleFinding(4)">
+                            <td class="rank">5</td>
+                            <td>Person Age</td>
+                            <td class="correlation">0.3737</td>
+                            <td>0.0270</td>
+                            <td><span class="significance sig">Significant</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="findings">
@@ -595,7 +352,76 @@
         </div>
     </div>
 
+    <!-- JSON Viewer Modal -->
+    <div id="jsonModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>User Data (JSON)</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="json-viewer">
+                    <pre id="jsonContent"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Fetch and store JSON data
+        let userData = null;
+
+        async function loadUserData() {
+            try {
+                const response = await fetch('user_data_export_2025-11-09T23-26-34.json');
+                userData = await response.json();
+            } catch (error) {
+                console.error('Error loading user data:', error);
+                alert('Error loading user data. Please ensure the JSON file is in the same directory.');
+            }
+        }
+
+        // Load data when page loads
+        loadUserData();
+
+        function viewJSON() {
+            if (!userData) {
+                alert('User data is still loading. Please try again.');
+                return;
+            }
+            document.getElementById('jsonContent').textContent = JSON.stringify(userData, null, 2);
+            document.getElementById('jsonModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('jsonModal').classList.remove('active');
+        }
+
+        function downloadJSON() {
+            if (!userData) {
+                alert('User data is still loading. Please try again.');
+                return;
+            }
+            const dataStr = JSON.stringify(userData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'user_data_export.json';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('jsonModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
         function toggleFinding(index) {
             const content = document.getElementById(`content-${index}`);
             const arrow = document.getElementById(`arrow-${index}`);

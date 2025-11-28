@@ -1,0 +1,1056 @@
+{
+  "exportDate": "2025-11-09T23:26:34.627Z",
+  "totalUsers": 50,
+  "users": [
+    {
+      "userNumber": 1,
+      "userId": "b301e381-b177-41c3-a694-24423a750361",
+      "anchor": "hgh",
+      "chair_guess": 11111,
+      "monument_age_guess": {
+        "l1": 7500,
+        "l2": 6000,
+        "h1": 3000,
+        "h2": 1500
+      },
+      "person_age_guess": {
+        "person1": 34,
+        "person2": 28,
+        "person3": 25
+      },
+      "wheel_fortune": 69,
+      "consent": true,
+      "createdAt": "2025-11-09T17:16:30.625Z",
+      "updatedAt": "2025-11-09T17:19:25.527Z"
+    },
+    {
+      "userNumber": 2,
+      "userId": "083505c1-f990-4b49-840c-0b4d7eb349a3",
+      "anchor": "low",
+      "chair_guess": 1800,
+      "monument_age_guess": {
+        "l1": 1771,
+        "l2": 2311,
+        "h1": 1000,
+        "h2": 713
+      },
+      "person_age_guess": {
+        "person1": 42,
+        "person2": 23,
+        "person3": 24
+      },
+      "wheel_fortune": 8,
+      "consent": true,
+      "createdAt": "2025-11-09T17:25:29.983Z",
+      "updatedAt": "2025-11-09T17:28:37.001Z"
+    },
+    {
+      "userNumber": 3,
+      "userId": "e457cda9-c2e4-4927-967f-943d5fb828de",
+      "anchor": "none",
+      "chair_guess": 2000,
+      "monument_age_guess": {
+        "l1": 3000,
+        "l2": 2000,
+        "h1": 2000,
+        "h2": 500
+      },
+      "person_age_guess": {
+        "person1": 60,
+        "person2": 22,
+        "person3": 18
+      },
+      "wheel_fortune": 15,
+      "consent": true,
+      "createdAt": "2025-11-09T18:53:18.747Z",
+      "updatedAt": "2025-11-09T18:54:51.326Z"
+    },
+    {
+      "userNumber": 4,
+      "userId": "4d452740-7730-43f4-9688-403589eda6ad",
+      "anchor": "hgh",
+      "chair_guess": 15000,
+      "monument_age_guess": {
+        "l1": 7045,
+        "l2": 64,
+        "h1": 272,
+        "h2": 7430
+      },
+      "person_age_guess": {
+        "person1": 69,
+        "person2": 39,
+        "person3": 22
+      },
+      "wheel_fortune": 30,
+      "consent": true,
+      "createdAt": "2025-11-09T18:54:43.430Z",
+      "updatedAt": "2025-11-09T18:57:37.597Z"
+    },
+    {
+      "userNumber": 6,
+      "userId": "877a6134-0f2a-42d4-81fc-2b480ab4da76",
+      "anchor": "none",
+      "chair_guess": 15100,
+      "monument_age_guess": {
+        "l1": 400,
+        "l2": 300,
+        "h1": 500,
+        "h2": 800
+      },
+      "person_age_guess": {
+        "person1": 60,
+        "person2": 27,
+        "person3": 18
+      },
+      "wheel_fortune": 17,
+      "consent": true,
+      "createdAt": "2025-11-09T18:54:47.168Z",
+      "updatedAt": "2025-11-09T18:57:51.835Z"
+    },
+    {
+      "userNumber": 7,
+      "userId": "0c52b195-2c7f-4d41-af9c-b233f5db0fcc",
+      "anchor": "hgh",
+      "chair_guess": 2500,
+      "monument_age_guess": {
+        "l1": 3478,
+        "l2": 1087,
+        "h1": 3261,
+        "h2": 5072
+      },
+      "person_age_guess": {
+        "person1": 61,
+        "person2": 45,
+        "person3": 25
+      },
+      "wheel_fortune": 30,
+      "consent": true,
+      "createdAt": "2025-11-09T18:56:44.863Z",
+      "updatedAt": "2025-11-09T18:59:27.723Z"
+    },
+    {
+      "userNumber": 8,
+      "userId": "6056bd84-b764-4eff-979c-e0e0427ae033",
+      "anchor": "low",
+      "chair_guess": 1800,
+      "monument_age_guess": {
+        "l1": 1129,
+        "l2": 3343,
+        "h1": 4080,
+        "h2": 6917
+      },
+      "person_age_guess": {
+        "person1": 100,
+        "person2": 42,
+        "person3": 22
+      },
+      "wheel_fortune": 21,
+      "consent": true,
+      "createdAt": "2025-11-09T18:58:50.246Z",
+      "updatedAt": "2025-11-09T19:01:51.906Z"
+    },
+    {
+      "userNumber": 10,
+      "userId": "1e7f5bf4-2ba4-4948-9891-9466d80e3824",
+      "anchor": "hgh",
+      "chair_guess": 12000,
+      "monument_age_guess": {
+        "l1": 7500,
+        "l2": 6000,
+        "h1": 3000,
+        "h2": 1500
+      },
+      "person_age_guess": {
+        "person1": 70,
+        "person2": 40,
+        "person3": 25
+      },
+      "wheel_fortune": 69,
+      "consent": true,
+      "createdAt": "2025-11-09T19:01:02.872Z",
+      "updatedAt": "2025-11-09T19:02:05.174Z"
+    },
+    {
+      "userNumber": 11,
+      "userId": "dc4e74bb-2f0b-433e-9858-6603f44d35be",
+      "anchor": "low",
+      "chair_guess": 1500,
+      "monument_age_guess": {
+        "l1": 2500,
+        "l2": 2000,
+        "h1": 1000,
+        "h2": 500
+      },
+      "person_age_guess": {
+        "person1": 40,
+        "person2": 20,
+        "person3": 15
+      },
+      "wheel_fortune": 8,
+      "consent": true,
+      "createdAt": "2025-11-09T19:07:28.481Z",
+      "updatedAt": "2025-11-09T19:08:49.417Z"
+    },
+    {
+      "userNumber": 13,
+      "userId": "f512de07-bdb2-48e2-b0fa-c0ad46939c98",
+      "anchor": "hgh",
+      "chair_guess": 14000,
+      "monument_age_guess": {
+        "l1": 8666,
+        "l2": 5512,
+        "h1": 3318,
+        "h2": 2600
+      },
+      "person_age_guess": {
+        "person1": 66,
+        "person2": 46,
+        "person3": 30
+      },
+      "wheel_fortune": 70,
+      "consent": true,
+      "createdAt": "2025-11-09T19:09:59.523Z",
+      "updatedAt": "2025-11-09T19:11:18.500Z"
+    },
+    {
+      "userNumber": 14,
+      "userId": "6c3b968e-be64-407d-be2c-e30ef368b620",
+      "anchor": "low",
+      "chair_guess": 1669,
+      "monument_age_guess": {
+        "l1": 5078,
+        "l2": 5096,
+        "h1": 5058,
+        "h2": 5071
+      },
+      "person_age_guess": {
+        "person1": 57,
+        "person2": 44,
+        "person3": 23
+      },
+      "wheel_fortune": 23,
+      "consent": true,
+      "createdAt": "2025-11-09T19:10:52.347Z",
+      "updatedAt": "2025-11-09T19:13:05.624Z"
+    },
+    {
+      "userNumber": 16,
+      "userId": "f7f41aef-7485-4317-92fa-5a00bda432b1",
+      "anchor": "hgh",
+      "chair_guess": 9000,
+      "monument_age_guess": {
+        "l1": 2073,
+        "l2": 195,
+        "h1": 1904,
+        "h2": 1050
+      },
+      "person_age_guess": {
+        "person1": 59,
+        "person2": 44,
+        "person3": 28
+      },
+      "wheel_fortune": 40,
+      "consent": true,
+      "createdAt": "2025-11-09T19:26:27.234Z",
+      "updatedAt": "2025-11-09T19:30:07.793Z"
+    },
+    {
+      "userNumber": 17,
+      "userId": "24f90d01-eaea-4017-a824-3b85c377fc49",
+      "anchor": "low",
+      "chair_guess": 6738,
+      "monument_age_guess": {
+        "l1": 2500,
+        "l2": 3136,
+        "h1": 1000,
+        "h2": 1568
+      },
+      "person_age_guess": {
+        "person1": 35,
+        "person2": 40,
+        "person3": 22
+      },
+      "wheel_fortune": 15,
+      "consent": true,
+      "createdAt": "2025-11-09T19:29:23.477Z",
+      "updatedAt": "2025-11-09T19:34:14.032Z"
+    },
+    {
+      "userNumber": 18,
+      "userId": "7144932f-5b47-436f-91cb-90a490d4f547",
+      "anchor": "none",
+      "chair_guess": 2999,
+      "monument_age_guess": {
+        "l1": 296,
+        "l2": 348,
+        "h1": 1000,
+        "h2": 1498
+      },
+      "person_age_guess": {
+        "person1": 66,
+        "person2": 32,
+        "person3": 25
+      },
+      "wheel_fortune": 12,
+      "consent": true,
+      "createdAt": "2025-11-09T19:32:12.555Z",
+      "updatedAt": "2025-11-09T19:35:19.085Z"
+    },
+    {
+      "userNumber": 19,
+      "userId": "c8112e55-771c-492c-a545-bf5976ce464c",
+      "anchor": "hgh",
+      "chair_guess": 10000,
+      "monument_age_guess": {
+        "l1": 1459,
+        "l2": 962,
+        "h1": 547,
+        "h2": 3744
+      },
+      "person_age_guess": {
+        "person1": 62,
+        "person2": 40,
+        "person3": 25
+      },
+      "wheel_fortune": 80,
+      "consent": true,
+      "createdAt": "2025-11-09T19:32:35.468Z",
+      "updatedAt": "2025-11-09T19:37:23.830Z"
+    },
+    {
+      "userNumber": 20,
+      "userId": "b772e7e4-8169-436d-ab70-3dadfb5a7a84",
+      "anchor": "low",
+      "chair_guess": 4999,
+      "monument_age_guess": {
+        "l1": 2590,
+        "l2": 1493,
+        "h1": 1000,
+        "h2": 860
+      },
+      "person_age_guess": {
+        "person1": 53,
+        "person2": 27,
+        "person3": 19
+      },
+      "wheel_fortune": 8,
+      "consent": true,
+      "createdAt": "2025-11-09T19:43:58.984Z",
+      "updatedAt": "2025-11-09T19:48:09.089Z"
+    },
+    {
+      "userNumber": 21,
+      "userId": "c73dee9b-7a1e-4d60-8979-4fc5bd335aac",
+      "anchor": "none",
+      "chair_guess": 17000,
+      "monument_age_guess": {
+        "l1": 398,
+        "l2": 168,
+        "h1": 1398,
+        "h2": 7000
+      },
+      "person_age_guess": {
+        "person1": 70,
+        "person2": 28,
+        "person3": 22
+      },
+      "wheel_fortune": 18,
+      "consent": true,
+      "createdAt": "2025-11-09T19:50:55.505Z",
+      "updatedAt": "2025-11-09T19:54:02.346Z"
+    },
+    {
+      "userNumber": 22,
+      "userId": "48723358-bbc5-4faa-959a-6982f35540a7",
+      "anchor": "hgh",
+      "chair_guess": 4000,
+      "monument_age_guess": {
+        "l1": 1040,
+        "l2": 1701,
+        "h1": 1848,
+        "h2": 918
+      },
+      "person_age_guess": {
+        "person1": 53,
+        "person2": 31,
+        "person3": 19
+      },
+      "wheel_fortune": 30,
+      "consent": true,
+      "createdAt": "2025-11-09T19:52:04.132Z",
+      "updatedAt": "2025-11-09T19:56:28.922Z"
+    },
+    {
+      "userNumber": 23,
+      "userId": "4dd5570c-74ee-4365-97f3-d9fb39b9b883",
+      "anchor": "low",
+      "chair_guess": 3500,
+      "monument_age_guess": {
+        "l1": 1714,
+        "l2": 1482,
+        "h1": 2031,
+        "h2": 1408
+      },
+      "person_age_guess": {
+        "person1": 60,
+        "person2": 28,
+        "person3": 23
+      },
+      "wheel_fortune": 35,
+      "consent": true,
+      "createdAt": "2025-11-09T20:05:48.311Z",
+      "updatedAt": "2025-11-09T20:10:49.306Z"
+    },
+    {
+      "userNumber": 25,
+      "userId": "7b45a30e-682c-4ed0-aac2-bf027d0fd4b4",
+      "anchor": "hgh",
+      "chair_guess": 9000,
+      "monument_age_guess": {
+        "l1": 5786,
+        "l2": 7822,
+        "h1": 8001,
+        "h2": 6756
+      },
+      "person_age_guess": {
+        "person1": 75,
+        "person2": 33,
+        "person3": 23
+      },
+      "wheel_fortune": 85,
+      "consent": true,
+      "createdAt": "2025-11-09T20:13:06.861Z",
+      "updatedAt": "2025-11-09T20:16:00.256Z"
+    },
+    {
+      "userNumber": 26,
+      "userId": "d034783d-7a58-438d-acd9-46d7a48978ba",
+      "anchor": "low",
+      "chair_guess": 4499,
+      "monument_age_guess": {
+        "l1": 795,
+        "l2": 1149,
+        "h1": 2139,
+        "h2": 203
+      },
+      "person_age_guess": {
+        "person1": 38,
+        "person2": 25,
+        "person3": 20
+      },
+      "wheel_fortune": 27,
+      "consent": true,
+      "createdAt": "2025-11-09T20:16:49.458Z",
+      "updatedAt": "2025-11-09T20:20:00.201Z"
+    },
+    {
+      "userNumber": 27,
+      "userId": "41176884-bf1d-48ce-a60a-2706423c8d79",
+      "anchor": "none",
+      "chair_guess": 6000,
+      "monument_age_guess": {
+        "l1": 8000,
+        "l2": 700,
+        "h1": 2200,
+        "h2": 1000
+      },
+      "person_age_guess": {
+        "person1": 59,
+        "person2": 31,
+        "person3": 24
+      },
+      "wheel_fortune": 20,
+      "consent": true,
+      "createdAt": "2025-11-09T20:17:18.190Z",
+      "updatedAt": "2025-11-09T20:23:16.424Z"
+    },
+    {
+      "userNumber": 28,
+      "userId": "53ae71fe-f2ad-44e1-8977-d37a2fa2f21c",
+      "anchor": "hgh",
+      "chair_guess": 9000,
+      "monument_age_guess": {
+        "l1": 3415,
+        "l2": 127,
+        "h1": 3767,
+        "h2": 5744
+      },
+      "person_age_guess": {
+        "person1": 69,
+        "person2": 32,
+        "person3": 24
+      },
+      "wheel_fortune": 34,
+      "consent": true,
+      "createdAt": "2025-11-09T20:20:40.289Z",
+      "updatedAt": "2025-11-09T20:24:37.025Z"
+    },
+    {
+      "userNumber": 29,
+      "userId": "f65de512-cfdc-4a29-b17a-f096e1c3b1c1",
+      "anchor": "low",
+      "chair_guess": 4498,
+      "monument_age_guess": {
+        "l1": 2500,
+        "l2": 2516,
+        "h1": 3138,
+        "h2": 1303
+      },
+      "person_age_guess": {
+        "person1": 83,
+        "person2": 52,
+        "person3": 49
+      },
+      "wheel_fortune": 23,
+      "consent": true,
+      "createdAt": "2025-11-09T20:37:32.359Z",
+      "updatedAt": "2025-11-09T20:40:06.874Z"
+    },
+    {
+      "userNumber": 30,
+      "userId": "6cd589ff-6954-4236-944e-4d26ecbdee17",
+      "anchor": "none",
+      "chair_guess": 9000,
+      "monument_age_guess": {
+        "l1": 300,
+        "l2": 100,
+        "h1": 2998,
+        "h2": 4000
+      },
+      "person_age_guess": {
+        "person1": 58,
+        "person2": 30,
+        "person3": 25
+      },
+      "wheel_fortune": 5,
+      "consent": true,
+      "createdAt": "2025-11-09T20:56:41.358Z",
+      "updatedAt": "2025-11-09T20:59:31.148Z"
+    },
+    {
+      "userNumber": 31,
+      "userId": "b2779c3a-c540-4f39-8d70-18af05c1ab98",
+      "anchor": "hgh",
+      "chair_guess": 4000,
+      "monument_age_guess": {
+        "l1": 6007,
+        "l2": 10000,
+        "h1": 2052,
+        "h2": 8054
+      },
+      "person_age_guess": {
+        "person1": 58,
+        "person2": 43,
+        "person3": 25
+      },
+      "wheel_fortune": 36,
+      "consent": true,
+      "createdAt": "2025-11-09T21:02:19.337Z",
+      "updatedAt": "2025-11-09T21:04:56.610Z"
+    },
+    {
+      "userNumber": 32,
+      "userId": "acac76ab-b31b-4ba1-b004-e50c9d3b2eee",
+      "anchor": "low",
+      "chair_guess": 1000,
+      "monument_age_guess": {
+        "l1": 1521,
+        "l2": 1238,
+        "h1": 2087,
+        "h2": 3078
+      },
+      "person_age_guess": {
+        "person1": 59,
+        "person2": 36,
+        "person3": 25
+      },
+      "wheel_fortune": 8,
+      "consent": true,
+      "createdAt": "2025-11-09T21:02:55.417Z",
+      "updatedAt": "2025-11-09T21:05:34.497Z"
+    },
+    {
+      "userNumber": 33,
+      "userId": "37ff023d-a41d-42ad-818d-5dffeb6426ac",
+      "anchor": "none",
+      "chair_guess": 7000,
+      "monument_age_guess": {
+        "l1": 900,
+        "l2": 400,
+        "h1": 800,
+        "h2": 1
+      },
+      "person_age_guess": {
+        "person1": 72,
+        "person2": 35,
+        "person3": 24
+      },
+      "wheel_fortune": 15,
+      "consent": true,
+      "createdAt": "2025-11-09T21:10:13.593Z",
+      "updatedAt": "2025-11-09T21:13:26.382Z"
+    },
+    {
+      "userNumber": 34,
+      "userId": "36fd4a1a-1099-4f97-a90d-f7a167a6f7fe",
+      "anchor": "hgh",
+      "chair_guess": 15000,
+      "monument_age_guess": {
+        "l1": 607,
+        "l2": 786,
+        "h1": 818,
+        "h2": 1155
+      },
+      "person_age_guess": {
+        "person1": 67,
+        "person2": 27,
+        "person3": 20
+      },
+      "wheel_fortune": 23,
+      "consent": true,
+      "createdAt": "2025-11-09T21:22:40.525Z",
+      "updatedAt": "2025-11-09T21:25:18.018Z"
+    },
+    {
+      "userNumber": 35,
+      "userId": "0784b3ed-db3d-4f12-a63b-9a0fa15f10e0",
+      "anchor": "low",
+      "chair_guess": 5000,
+      "monument_age_guess": {
+        "l1": 8982,
+        "l2": 4699,
+        "h1": 1756,
+        "h2": 2368
+      },
+      "person_age_guess": {
+        "person1": 60,
+        "person2": 35,
+        "person3": 27
+      },
+      "wheel_fortune": 25,
+      "consent": true,
+      "createdAt": "2025-11-09T21:25:45.128Z",
+      "updatedAt": "2025-11-09T21:28:17.940Z"
+    },
+    {
+      "userNumber": 36,
+      "userId": "7d111a5f-08f2-4710-9e3b-adf3049861b2",
+      "anchor": "none",
+      "chair_guess": 5000,
+      "monument_age_guess": {
+        "l1": 1199,
+        "l2": 200,
+        "h1": 1000,
+        "h2": 2000
+      },
+      "person_age_guess": {
+        "person1": 57,
+        "person2": 29,
+        "person3": 25
+      },
+      "wheel_fortune": 19,
+      "consent": true,
+      "createdAt": "2025-11-09T21:28:29.712Z",
+      "updatedAt": "2025-11-09T21:32:14.533Z"
+    },
+    {
+      "userNumber": 37,
+      "userId": "4cc5d838-9cb5-46c4-a2fa-35ddaea5df60",
+      "anchor": "hgh",
+      "chair_guess": 0,
+      "monument_age_guess": {
+        "l1": 0,
+        "l2": 0,
+        "h1": 0,
+        "h2": 0
+      },
+      "person_age_guess": {
+        "person1": 0,
+        "person2": 0,
+        "person3": 0
+      },
+      "wheel_fortune": 0,
+      "consent": true,
+      "createdAt": "2025-11-09T21:30:24.614Z",
+      "updatedAt": "2025-11-09T21:45:59.859Z"
+    },
+    {
+      "userNumber": 38,
+      "userId": "967e6330-05da-464a-b989-f04098223541",
+      "anchor": "low",
+      "chair_guess": 10000,
+      "monument_age_guess": {
+        "l1": 2500,
+        "l2": 2000,
+        "h1": 2021,
+        "h2": 4103
+      },
+      "person_age_guess": {
+        "person1": 40,
+        "person2": 34,
+        "person3": 22
+      },
+      "wheel_fortune": 20,
+      "consent": true,
+      "createdAt": "2025-11-09T21:45:44.494Z",
+      "updatedAt": "2025-11-09T21:47:10.224Z"
+    },
+    {
+      "userNumber": 39,
+      "userId": "d53881f5-b785-44ce-97b3-913fd4dafc44",
+      "anchor": "none",
+      "chair_guess": 25000,
+      "monument_age_guess": {
+        "l1": 5000,
+        "l2": 2000,
+        "h1": 3000,
+        "h2": 6000
+      },
+      "person_age_guess": {
+        "person1": 65,
+        "person2": 38,
+        "person3": 29
+      },
+      "wheel_fortune": 20,
+      "consent": true,
+      "createdAt": "2025-11-09T22:14:24.687Z",
+      "updatedAt": "2025-11-09T22:19:02.515Z"
+    },
+    {
+      "userNumber": 40,
+      "userId": "383e76b4-b161-4dca-817c-71449597a9e7",
+      "anchor": "hgh",
+      "chair_guess": 25000,
+      "monument_age_guess": {
+        "l1": 6068,
+        "l2": 2128,
+        "h1": 4434,
+        "h2": 4887
+      },
+      "person_age_guess": {
+        "person1": 67,
+        "person2": 32,
+        "person3": 29
+      },
+      "wheel_fortune": 20,
+      "consent": true,
+      "createdAt": "2025-11-09T22:19:43.666Z",
+      "updatedAt": "2025-11-09T22:22:29.151Z"
+    },
+    {
+      "userNumber": 41,
+      "userId": "53403cae-8a89-4294-91fb-dfd0d3c3eae2",
+      "anchor": "low",
+      "chair_guess": 0,
+      "monument_age_guess": {
+        "l1": 0,
+        "l2": 0,
+        "h1": 0,
+        "h2": 0
+      },
+      "person_age_guess": {
+        "person1": 0,
+        "person2": 0,
+        "person3": 0
+      },
+      "wheel_fortune": 0,
+      "consent": true,
+      "createdAt": "2025-11-09T22:23:07.557Z",
+      "updatedAt": "2025-11-09T22:23:46.507Z"
+    },
+    {
+      "userNumber": 43,
+      "userId": "941aedf4-64c8-4609-82bf-065e86410c08",
+      "anchor": "hgh",
+      "chair_guess": 6000,
+      "monument_age_guess": {
+        "l1": 2516,
+        "l2": 1078,
+        "h1": 5200,
+        "h2": 1511
+      },
+      "person_age_guess": {
+        "person1": 60,
+        "person2": 40,
+        "person3": 45
+      },
+      "wheel_fortune": 80,
+      "consent": true,
+      "createdAt": "2025-11-09T22:25:26.606Z",
+      "updatedAt": "2025-11-09T22:28:01.658Z"
+    },
+    {
+      "userNumber": 44,
+      "userId": "9c012f3f-0cb8-474f-899d-67eaf4b683ad",
+      "anchor": "low",
+      "chair_guess": 1000,
+      "monument_age_guess": {
+        "l1": 1299,
+        "l2": 2000,
+        "h1": 2071,
+        "h2": 1299
+      },
+      "person_age_guess": {
+        "person1": 60,
+        "person2": 30,
+        "person3": 30
+      },
+      "wheel_fortune": 15,
+      "consent": true,
+      "createdAt": "2025-11-09T22:26:13.110Z",
+      "updatedAt": "2025-11-09T22:28:02.123Z"
+    },
+    {
+      "userNumber": 45,
+      "userId": "c29d976b-cf8c-4312-9892-9f3611c933d7",
+      "anchor": "none",
+      "chair_guess": 2500,
+      "monument_age_guess": {
+        "l1": 1200,
+        "l2": 1400,
+        "h1": 2600,
+        "h2": 1800
+      },
+      "person_age_guess": {
+        "person1": 74,
+        "person2": 42,
+        "person3": 24
+      },
+      "wheel_fortune": 17,
+      "consent": true,
+      "createdAt": "2025-11-09T22:38:20.035Z",
+      "updatedAt": "2025-11-09T22:39:47.091Z"
+    },
+    {
+      "userNumber": 46,
+      "userId": "51001fba-8d3a-43b8-aae7-e3f779397747",
+      "anchor": "hgh",
+      "chair_guess": 1700,
+      "monument_age_guess": {
+        "l1": 3555,
+        "l2": 2764,
+        "h1": 1538,
+        "h2": 1573
+      },
+      "person_age_guess": {
+        "person1": 62,
+        "person2": 37,
+        "person3": 20
+      },
+      "wheel_fortune": 27,
+      "consent": true,
+      "createdAt": "2025-11-09T22:38:21.225Z",
+      "updatedAt": "2025-11-09T22:41:20.373Z"
+    },
+    {
+      "userNumber": 47,
+      "userId": "86c659ad-769d-4805-9194-3a92a6eb48b4",
+      "anchor": "low",
+      "chair_guess": 2000,
+      "monument_age_guess": {
+        "l1": 2030,
+        "l2": 2000,
+        "h1": 1000,
+        "h2": 500
+      },
+      "person_age_guess": {
+        "person1": 40,
+        "person2": 20,
+        "person3": 15
+      },
+      "wheel_fortune": 25,
+      "consent": true,
+      "createdAt": "2025-11-09T22:38:50.026Z",
+      "updatedAt": "2025-11-09T22:40:29.429Z"
+    },
+    {
+      "userNumber": 48,
+      "userId": "7da7ac00-1282-4c2a-a188-5b242706d274",
+      "anchor": "none",
+      "chair_guess": 5000,
+      "monument_age_guess": {
+        "l1": 500,
+        "l2": 1000,
+        "h1": 2000,
+        "h2": 1500
+      },
+      "person_age_guess": {
+        "person1": 71,
+        "person2": 35,
+        "person3": 30
+      },
+      "wheel_fortune": 29,
+      "consent": true,
+      "createdAt": "2025-11-09T22:39:12.800Z",
+      "updatedAt": "2025-11-09T22:41:10.016Z"
+    },
+    {
+      "userNumber": 49,
+      "userId": "5463ec9c-d17b-4971-8dcc-9460a7a702be",
+      "anchor": "hgh",
+      "chair_guess": 13000,
+      "monument_age_guess": {
+        "l1": 6691,
+        "l2": 5526,
+        "h1": 3459,
+        "h2": 1679
+      },
+      "person_age_guess": {
+        "person1": 63,
+        "person2": 24,
+        "person3": 33
+      },
+      "wheel_fortune": 72,
+      "consent": true,
+      "createdAt": "2025-11-09T23:11:08.175Z",
+      "updatedAt": "2025-11-09T23:13:12.409Z"
+    },
+    {
+      "userNumber": 50,
+      "userId": "407395a9-dc26-4697-a0b4-41b3455c966f",
+      "anchor": "low",
+      "chair_guess": 3000,
+      "monument_age_guess": {
+        "l1": 1950,
+        "l2": 2000,
+        "h1": 1000,
+        "h2": 1044
+      },
+      "person_age_guess": {
+        "person1": 45,
+        "person2": 28,
+        "person3": 15
+      },
+      "wheel_fortune": 7,
+      "consent": true,
+      "createdAt": "2025-11-09T23:13:18.411Z",
+      "updatedAt": "2025-11-09T23:14:48.941Z"
+    },
+    {
+      "userNumber": 51,
+      "userId": "e65016de-e38a-4c5a-87a1-1f9304ee7d0f",
+      "anchor": "none",
+      "chair_guess": 5900,
+      "monument_age_guess": {
+        "l1": 6000,
+        "l2": 700,
+        "h1": 1200,
+        "h2": 950
+      },
+      "person_age_guess": {
+        "person1": 55,
+        "person2": 23,
+        "person3": 20
+      },
+      "wheel_fortune": 19,
+      "consent": true,
+      "createdAt": "2025-11-09T23:14:54.331Z",
+      "updatedAt": "2025-11-09T23:16:55.214Z"
+    },
+    {
+      "userNumber": 52,
+      "userId": "a75c819c-68b8-4d85-9baf-f854450179a4",
+      "anchor": "hgh",
+      "chair_guess": 13000,
+      "monument_age_guess": {
+        "l1": 8325,
+        "l2": 5117,
+        "h1": 4171,
+        "h2": 3200
+      },
+      "person_age_guess": {
+        "person1": 61,
+        "person2": 34,
+        "person3": 25
+      },
+      "wheel_fortune": 75,
+      "consent": true,
+      "createdAt": "2025-11-09T23:17:32.350Z",
+      "updatedAt": "2025-11-09T23:20:50.098Z"
+    },
+    {
+      "userNumber": 53,
+      "userId": "ee5c7890-06ec-414d-aedb-72d78c256c82",
+      "anchor": "low",
+      "chair_guess": 2100,
+      "monument_age_guess": {
+        "l1": 2794,
+        "l2": 1715,
+        "h1": 1497,
+        "h2": 383
+      },
+      "person_age_guess": {
+        "person1": 43,
+        "person2": 16,
+        "person3": 20
+      },
+      "wheel_fortune": 21,
+      "consent": true,
+      "createdAt": "2025-11-09T23:20:11.158Z",
+      "updatedAt": "2025-11-09T23:21:24.020Z"
+    },
+    {
+      "userNumber": 54,
+      "userId": "ebf873e6-1121-4a24-b58f-446fefbacc94",
+      "anchor": "none",
+      "chair_guess": 30000,
+      "monument_age_guess": {
+        "l1": 5000,
+        "l2": 600,
+        "h1": 1200,
+        "h2": 1300
+      },
+      "person_age_guess": {
+        "person1": 70,
+        "person2": 24,
+        "person3": 24
+      },
+      "wheel_fortune": 6,
+      "consent": true,
+      "createdAt": "2025-11-09T23:21:02.652Z",
+      "updatedAt": "2025-11-09T23:24:26.705Z"
+    },
+    {
+      "userNumber": 55,
+      "userId": "cc1d9cdb-6392-4685-8403-bf335c3e399e",
+      "anchor": "hgh",
+      "chair_guess": 2200,
+      "monument_age_guess": {
+        "l1": 7038,
+        "l2": 6422,
+        "h1": 2630,
+        "h2": 1980
+      },
+      "person_age_guess": {
+        "person1": 64,
+        "person2": 46,
+        "person3": 20
+      },
+      "wheel_fortune": 8,
+      "consent": true,
+      "createdAt": "2025-11-09T23:21:30.681Z",
+      "updatedAt": "2025-11-09T23:22:54.397Z"
+    },
+    {
+      "userNumber": 56,
+      "userId": "abd597ac-b962-4e29-9e48-49aae1074ed5",
+      "anchor": "low",
+      "chair_guess": 1800,
+      "monument_age_guess": {
+        "l1": 2897,
+        "l2": 2533,
+        "h1": 1608,
+        "h2": 929
+      },
+      "person_age_guess": {
+        "person1": 45,
+        "person2": 25,
+        "person3": 11
+      },
+      "wheel_fortune": 16,
+      "consent": true,
+      "createdAt": "2025-11-09T23:23:45.866Z",
+      "updatedAt": "2025-11-09T23:24:54.303Z"
+    }
+  ]
+}
