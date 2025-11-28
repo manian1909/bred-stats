@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchoring Effect Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .stat-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .stat-box .label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .stat-box .value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .table-section {
+            padding: 40px;
+        }
+        .table-section h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+        tr:hover {
+            background: #f8f9fa;
+            cursor: pointer;
+        }
+        .rank {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 16px;
+        }
+        .correlation {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .significance {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .highly-sig {
+            background: #e74c3c;
+            color: white;
+        }
+        .sig {
+            background: #f39c12;
+            color: white;
+        }
+        .findings {
+            padding: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .findings h2 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .finding-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .finding-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .finding-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .finding-meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+        .finding-content {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .finding-content.active {
+            display: block;
+        }
+        .graph-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .graph-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .data-box {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        .data-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .data-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .data-sd {
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .explanation-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            line-height: 1.6;
+            font-size: 14px;
+            color: #555;
+        }
+        .observations-box {
+            background: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            line-height: 1.6;
+            font-size: 14px;
+            color: #333;
+        }
+        .observations-box strong {
+            color: #f39c12;
+        }
+        .insight-box {
+            background: white;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #555;
+        }
+        .conclusion {
+            background: #f0f4ff;
+            padding: 30px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        .conclusion h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .conclusion p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .toggle-arrow {
+            display: inline-block;
+            float: right;
+            transition: transform 0.3s ease;
+        }
+        .toggle-arrow.active {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Anchoring Effect Correlation Analysis</h1>
+            <p>Comprehensive statistical analysis of cognitive bias patterns across five distinct domains</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="label">Total Participants</div>
+                <div class="value">48</div>
+            </div>
+            <div class="stat-box">
+                <div class="label">All Correlations</div>
+                <div class="value">Significant</div>
+            </div>
+            <div class="stat-box">
+                <div class="label">Significance Level</div>
+                <div class="value">p < 0.05</div>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h2>Summary Table (Ranked by Effect Strength)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Task</th>
+                        <th>Correlation (r)</th>
+                        <th>P-value</th>
+                        <th>Significance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="toggleFinding(0)">
+                        <td class="rank">1</td>
+                        <td>Wheel of Fortune</td>
+                        <td class="correlation">0.6400</td>
+                        <td>0.0000</td>
+                        <td><span class="significance highly-sig">Highly Significant</span></td>
+                    </tr>
+                    <tr onclick="toggleFinding(1)">
+                        <td class="rank">2</td>
+                        <td>Watch Guess</td>
+                        <td class="correlation">0.5870</td>
+                        <td>0.0002</td>
+                        <td><span class="significance highly-sig">Highly Significant</span></td>
+                    </tr>
+                    <tr onclick="toggleFinding(2)">
+                        <td class="rank">3</td>
+                        <td>Monument L (Low Familiarity)</td>
+                        <td class="correlation">0.3867</td>
+                        <td>0.0217</td>
+                        <td><span class="significance sig">Significant</span></td>
+                    </tr>
+                    <tr onclick="toggleFinding(3)">
+                        <td class="rank">4</td>
+                        <td>Monument H (High Familiarity)</td>
+                        <td class="correlation">0.3791</td>
+                        <td>0.0247</td>
+                        <td><span class="significance sig">Significant</span></td>
+                    </tr>
+                    <tr onclick="toggleFinding(4)">
+                        <td class="rank">5</td>
+                        <td>Person Age</td>
+                        <td class="correlation">0.3737</td>
+                        <td>0.0270</td>
+                        <td><span class="significance sig">Significant</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="findings">
+            <h2>Detailed Findings (Click to expand)</h2>
+
+            <!-- Finding 1: Wheel of Fortune -->
+            <div class="finding-card" onclick="toggleFinding(0)">
+                <div class="finding-title">
+                    <span class="toggle-arrow" id="arrow-0">▼</span>
+                    #1 Wheel of Fortune — r = 0.6400, p = 0.0000
+                </div>
+                <div class="finding-meta">Highly Significant • Strongest Anchoring Effect</div>
+                <div class="finding-content" id="content-0">
+                    <div class="explanation-box">
+                        <strong>Overview:</strong> The Wheel of Fortune task demonstrated the strongest anchoring effect in the entire study. This abstract, probabilistic judgment task showed the highest correlation between anchor values and participant responses.
+                    </div>
+
+                    <div class="graph-container">
+                        <img src="p-test/anchoring_wheel_of_fortune/analysis.png" alt="Wheel of Fortune Graph">
+                    </div>
+
+                    <div class="data-grid">
+                        <div class="data-box">
+                            <div class="data-label">High Anchor</div>
+                            <div class="data-value">48.78</div>
+                            <div class="data-sd">SD: 25.33</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Low Anchor</div>
+                            <div class="data-value">17.94</div>
+                            <div class="data-sd">SD: 8.23</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Control</div>
+                            <div class="data-value">16.31</div>
+                            <div class="data-sd">SD: 6.21</div>
+                        </div>
+                    </div>
+
+                    <div class="observations-box">
+                        <strong>Key Observations:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li><strong>Strongest Effect Observed:</strong> This task showed the highest correlation (r = 0.64) and the highest significance level.</li>
+                            <li><strong>The Impact:</strong> The High Anchor mean (48.78) was more than 2.7x higher than the Low Anchor mean (17.94) and the Control mean (16.31). This suggests that in purely abstract or random contexts, participants rely heavily on the anchor provided, lacking other reference points.</li>
+                            <li><strong>Why So Strong?</strong> Participants have no inherent knowledge about wheel outcomes, making them almost entirely dependent on the numerical cue provided to estimate probabilities.</li>
+                        </ul>
+                    </div>
+
+                    <div class="insight-box">
+                        <strong>Key Insight:</strong> High anchor estimates are 2.72x higher than low anchor estimates. When facing complete uncertainty, participants become maximally susceptible to anchoring effects.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finding 2: Watch Guess -->
+            <div class="finding-card" onclick="toggleFinding(1)">
+                <div class="finding-title">
+                    <span class="toggle-arrow" id="arrow-1">▼</span>
+                    #2 Watch Guess — r = 0.5870, p = 0.0002
+                </div>
+                <div class="finding-meta">Highly Significant • Second Strongest Effect</div>
+                <div class="finding-content" id="content-1">
+                    <div class="explanation-box">
+                        <strong>Overview:</strong> Watch/Chair pricing estimates revealed the second-strongest anchoring effect. Monetary valuations proved highly susceptible to numerical anchors, demonstrating that even in familiar domains, anchoring significantly biases economic estimates.
+                    </div>
+
+                    <div class="graph-container">
+                        <img src="p-test/anchoring_chair/analysis.png" alt="Watch Guess Graph">
+                    </div>
+
+                    <div class="data-grid">
+                        <div class="data-box">
+                            <div class="data-label">High Anchor</div>
+                            <div class="data-value">9750.61</div>
+                            <div class="data-sd">SD: 5891.64</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Low Anchor</div>
+                            <div class="data-value">3347.24</div>
+                            <div class="data-sd">SD: 2395.46</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Control</div>
+                            <div class="data-value">10192.23</div>
+                            <div class="data-sd">SD: 8951.74</div>
+                        </div>
+                    </div>
+
+                    <div class="observations-box">
+                        <strong>Key Observations:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li><strong>Monetary Estimates are Vulnerable:</strong> High anchor estimates (9750.61) nearly triple low anchor estimates (3347.24), demonstrating strong anchoring bias in pricing tasks.</li>
+                            <li><strong>Real-World Implications:</strong> This pattern suggests that initial price suggestions in negotiations heavily influence final valuations.</li>
+                            <li><strong>Higher Variability:</strong> The larger standard deviations (especially for control: SD = 8951.74) indicate greater uncertainty when no anchor is provided, but the anchor still powerfully constrains estimates.</li>
+                        </ul>
+                    </div>
+
+                    <div class="insight-box">
+                        <strong>Key Insight:</strong> High anchor estimates are 2.91x higher than low anchor estimates. Monetary valuations are highly susceptible to anchoring, with critical implications for negotiations and market pricing.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finding 3: Monument L -->
+            <div class="finding-card" onclick="toggleFinding(2)">
+                <div class="finding-title">
+                    <span class="toggle-arrow" id="arrow-2">▼</span>
+                    #3 Monument L (Low Familiarity) — r = 0.3867, p = 0.0217
+                </div>
+                <div class="finding-meta">Significant • Moderate Effect</div>
+                <div class="finding-content" id="content-2">
+                    <div class="explanation-box">
+                        <strong>Overview:</strong> Low-familiarity monuments showed moderate anchoring effects. When participants lack prior knowledge about specific objects, they become more reliant on provided anchors, but the effect is weaker than abstract domains.
+                    </div>
+
+                    <div class="graph-container">
+                        <img src="p-test/anchoring_monument_l_(low_familiarity)/analysis.png" alt="Monument L Graph">
+                    </div>
+
+                    <div class="data-grid">
+                        <div class="data-box">
+                            <div class="data-label">High Anchor</div>
+                            <div class="data-value">4223.89</div>
+                            <div class="data-sd">SD: 2594.86</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Low Anchor</div>
+                            <div class="data-value">2507.68</div>
+                            <div class="data-sd">SD: 1414.06</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Control</div>
+                            <div class="data-value">1619.58</div>
+                            <div class="data-sd">SD: 1469.02</div>
+                        </div>
+                    </div>
+
+                    <div class="observations-box">
+                        <strong>Key Observations:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li><strong>Knowledge Gap Increases Reliance:</strong> Without familiarity, participants depend more heavily on anchors. High anchor is 1.68x higher than low anchor.</li>
+                            <li><strong>Wider Anchor-Control Gap:</strong> Control group estimates (1619.58) are substantially lower than both anchor conditions, indicating that the absence of an anchor leads to conservative estimates.</li>
+                            <li><strong>Uncertainty Visible in Variance:</strong> Lower standard deviations compared to abstract tasks suggest slightly more constrained responses despite unfamiliarity.</li>
+                        </ul>
+                    </div>
+
+                    <div class="insight-box">
+                        <strong>Key Insight:</strong> High anchor estimates are 1.68x higher than low anchor estimates. Unfamiliarity increases anchoring susceptibility, but subjects still attempt to make reasonable estimates.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finding 4: Monument H -->
+            <div class="finding-card" onclick="toggleFinding(3)">
+                <div class="finding-title">
+                    <span class="toggle-arrow" id="arrow-3">▼</span>
+                    #4 Monument H (High Familiarity) — r = 0.3791, p = 0.0247
+                </div>
+                <div class="finding-meta">Significant • Moderate Effect</div>
+                <div class="finding-content" id="content-3">
+                    <div class="explanation-box">
+                        <strong>Overview:</strong> High-familiarity monuments showed persistent but reduced anchoring effects. When participants have prior knowledge, they have internal reference points, but anchors still significantly influence their estimates.
+                    </div>
+
+                    <div class="graph-container">
+                        <img src="p-test/anchoring_monument_h_(high_familiarity)/analysis.png" alt="Monument H Graph">
+                    </div>
+
+                    <div class="data-grid">
+                        <div class="data-box">
+                            <div class="data-label">High Anchor</div>
+                            <div class="data-value">3154.81</div>
+                            <div class="data-sd">SD: 1628.34</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Low Anchor</div>
+                            <div class="data-value">1933.32</div>
+                            <div class="data-sd">SD: 1428.40</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Control</div>
+                            <div class="data-value">1932.50</div>
+                            <div class="data-sd">SD: 1313.75</div>
+                        </div>
+                    </div>
+
+                    <div class="observations-box">
+                        <strong>Key Observations:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li><strong>Reduced But Persistent Effect:</strong> High anchor is 1.63x higher than low anchor—substantially less than unfamiliar objects (1.68x), but the effect remains statistically significant.</li>
+                            <li><strong>Low Anchor = Control Convergence:</strong> Notice that low anchor (1933.32) and control group (1932.50) estimates are nearly identical. People with familiarity use their prior knowledge more than the low anchor.</li>
+                            <li><strong>Knowledge Provides Partial Protection:</strong> Participants with domain familiarity have working anchors in their minds, reducing reliance on external anchors. However, high anchors still override internal estimates.</li>
+                        </ul>
+                    </div>
+
+                    <div class="insight-box">
+                        <strong>Key Insight:</strong> High anchor estimates are 1.63x higher than low anchor estimates. Familiarity provides partial protection against anchoring, suggesting internal knowledge does constrain the bias, but doesn't eliminate it.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finding 5: Person Age -->
+            <div class="finding-card" onclick="toggleFinding(4)">
+                <div class="finding-title">
+                    <span class="toggle-arrow" id="arrow-4">▼</span>
+                    #5 Person Age — r = 0.3737, p = 0.0270
+                </div>
+                <div class="finding-meta">Significant • Weakest Effect</div>
+                <div class="finding-content" id="content-4">
+                    <div class="explanation-box">
+                        <strong>Overview:</strong> Person age estimation showed the weakest anchoring effect. This is because participants can directly observe faces and use visual cues to estimate age, providing strong internal reference points that reduce dependence on numerical anchors.
+                    </div>
+
+                    <div class="graph-container">
+                        <img src="p-test/anchoring_person_age_(all_3_combined)/analysis.png" alt="Person Age Graph">
+                    </div>
+
+                    <div class="data-grid">
+                        <div class="data-box">
+                            <div class="data-label">High Anchor</div>
+                            <div class="data-value">41.56</div>
+                            <div class="data-sd">SD: 4.50</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Low Anchor</div>
+                            <div class="data-value">35.43</div>
+                            <div class="data-sd">SD: 10.24</div>
+                        </div>
+                        <div class="data-box">
+                            <div class="data-label">Control</div>
+                            <div class="data-value">39.51</div>
+                            <div class="data-sd">SD: 4.49</div>
+                        </div>
+                    </div>
+
+                    <div class="observations-box">
+                        <strong>Key Observations:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li><strong>Why the Weakest Effect?</strong> High anchor is only 1.17x higher than low anchor. Age can be directly observed from physical features (wrinkles, hair color, etc.), providing strong visual anchors that override numerical cues.</li>
+                            <li><strong>Constrained Range Helps:</strong> Age estimates are naturally bounded (realistic human ages are 0-100 years). This constraint limits how far anchors can push estimates, preventing extreme responses.</li>
+                            <li><strong>Internal Estimates Dominate:</strong> Participants rely primarily on their perception of facial features rather than the numerical anchor provided, explaining the weak correlation.</li>
+                            <li><strong>Interesting Pattern:</strong> Low anchor has much higher variability (SD = 10.24) than high anchor (SD = 4.50), possibly because low anchors conflict more with visual perception, creating greater uncertainty.</li>
+                        </ul>
+                    </div>
+
+                    <div class="insight-box">
+                        <strong>Key Insight:</strong> High anchor estimates are only 1.17x higher than low anchor estimates. Direct observational cues (facial features) and bounded estimate ranges substantially reduce anchoring effects, showing that perceptual information can override numerical bias.
+                    </div>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <h3>Overall Conclusion</h3>
+                <p><strong>Anchoring Effect Spectrum:</strong> The study reveals a clear pattern in anchoring susceptibility across domains, ordered by effect strength:</p>
+                <p><strong>1. Highest Vulnerability (r ≈ 0.64-0.59):</strong> Abstract/probabilistic tasks (Wheel of Fortune) and monetary valuations (Watch Guess) show strongest anchoring because participants lack strong internal reference points.</p>
+                <p><strong>2. Moderate Vulnerability (r ≈ 0.39-0.38):</strong> Unfamiliar objects and high-familiarity objects both show moderate effects, though for different reasons. Unfamiliarity increases reliance on anchors; familiarity provides some protection but not enough to eliminate bias.</p>
+                <p><strong>3. Lowest Vulnerability (r ≈ 0.37):</strong> Direct observation tasks (age from appearance) show weakest anchoring due to strong perceptual cues and naturally constrained ranges.</p>
+                <p><strong>Key Finding:</strong> All correlations remain statistically significant (p < 0.05), indicating that anchoring effects are universal across domains—they vary only in magnitude. Participants consistently use numerical cues as reference points, even when better information is available. This has profound implications for negotiations, pricing decisions, and judgments in uncertain contexts.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFinding(index) {
+            const content = document.getElementById(`content-${index}`);
+            const arrow = document.getElementById(`arrow-${index}`);
+            content.classList.toggle('active');
+            arrow.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
